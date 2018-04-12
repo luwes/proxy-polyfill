@@ -30,9 +30,9 @@ global.Proxy = undefined;
 
 const testSuite = require('./suite.js');
 
-require('./src/index.js');  // include actual proxy
+global.Proxy = require('./lib/proxy.js');  // include actual proxy
 testSuite();  // run tests
 
 global.Proxy = undefined;
-require('./proxy.min.js');  // also, test output
+global.Proxy = require('./dist/proxy.min.js');  // also, test output
 testSuite();  // run tests

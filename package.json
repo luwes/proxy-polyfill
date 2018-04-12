@@ -43,7 +43,7 @@
     "build:umd": "cross-env NODE_ENV=development rollup -c -o dist/proxy.js",
     "build:umd:min": "cross-env NODE_ENV=production rollup -c -o dist/proxy.min.js",
     "build": "npm run build:cjs && npm run build:es && npm run build:umd && npm run build:umd:min",
-    "pretest": "npm run build:cjs",
+    "pretest": "npm run build:cjs && npm run build:umd:min",
     "test": "mocha"
   }
 }

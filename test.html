@@ -34,7 +34,7 @@
     console.warn('running tests in es5/compiled mode');
   }
   var s = document.createElement('script');
-  s.src = es6support ? 'proxy.js' : 'proxy.min.js';
+  s.src = es6support ? 'dist/proxy.js' : 'dist/proxy.min.js';
   document.write(s.outerHTML);
 </script>
 <script>
