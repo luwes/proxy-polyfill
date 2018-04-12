@@ -14,12 +14,5 @@
  * the License.
  */
 
-'use strict';
-
-(function(scope) {
-  if (scope['Proxy']) {
-    return;
-  }
-  scope.Proxy = require('./proxy.js')();
-  scope.Proxy['revocable'] = scope.Proxy.revocable;
-})("undefined" !== typeof process && "[object process]" === {}.toString.call(process) ? global : self);
+import ProxyPolyfill from './proxy';
+export default Proxy || ProxyPolyfill;
